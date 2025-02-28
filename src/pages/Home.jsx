@@ -42,7 +42,7 @@ const Home = () => {
   const fetchArticles = async (query = "general") => {
     setLoading(true);
     try {
-      const response = await axios.get(`https://news-blog-react.onrender.com`);
+      const response = await axios.get(`https://news-blog-react.onrender.com/news`);
       setArticles(response.data.articles);
       setVisibleArticles(response.data.articles.slice(0, 9));
     } catch (error) {
