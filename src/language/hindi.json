@@ -1,0 +1,15 @@
+{
+    "navbar": {
+        "home": "होम",
+        "world": "विश्व",
+        "technology": "तकनीक",
+        "sports": "खेल"
+    },
+    "home":{
+        "latest_articles": "नवीनतम लेख",
+        "search_placeholder": "लेख खोजें...",
+        "load_more": "और लोड करें",
+        "read_more": "और पढ़ें →",
+        "loading": "लोड हो रहा है..."
+    }
+}

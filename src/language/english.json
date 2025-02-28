@@ -1,0 +1,15 @@
+{
+    "navbar": {
+        "home": "Home",
+        "world": "World",
+        "technology": "Technology",
+        "sports": "Sports"
+    },
+    "home":{
+        "latest_articles": "Latest Articles",
+        "search_placeholder": "Search articles...",
+        "load_more": "Load More",
+        "read_more": "Read More →",
+        "loading": "Loading..."
+    }
+}
