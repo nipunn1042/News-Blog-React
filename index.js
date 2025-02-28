@@ -17,8 +17,8 @@ app.use(express.json());
 //routes for news
 app.get('/news', async (req, res) => {
     try {
-        const query = req.query.q;
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=general&apiKey=${process.env.API_KEY}`);
+        const query = req.query.q || "general";
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.API_KEY}`);
 
 
         if (!response.data || !response.data.articles) {
