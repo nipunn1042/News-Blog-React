@@ -18,12 +18,18 @@ app.use(express.json());
 app.get('/news', async (req, res) => {
     try {
         const query = req.query.q || "general";
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.API_KEY}`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.API_KEY}`,{
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+              'Accept': 'application/json'
+            }
+          });
 
 
         if (!response.data || !response.data.articles) {
             return 
-            res.status(404).json({ message: "No articles found" });
+            res.json({
+                articles: []});
         }
         res.json({
             articles: response.data.articles
