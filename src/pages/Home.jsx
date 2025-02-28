@@ -27,7 +27,7 @@ const Home = () => {
       setTitle("General News")
     }
     else{
-      setTitle(`${category.charAt(0).toUpperCase()}${category.slice(1)} News`)
+      setTitle(`${category ? category.charAt(0).toUpperCase() + category.slice(1) : "General"} News`);
     }
 
     fetchArticles(category);
