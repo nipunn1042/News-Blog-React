@@ -9,6 +9,7 @@ const PORT = process.env.PORT;
 
 
 
+
 app.use(cors());
 app.use(express.json());
 
@@ -17,7 +18,7 @@ app.use(express.json());
 app.get('/news', async (req, res) => {
     try {
         const query = req.query.q;
-        const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.API_KEY}`);
+        const response = await axios.get(`https://newsapi.org/v2/everything?q=general&apiKey=${process.env.API_KEY}`);
 
 
         if (!response.data || !response.data.articles) {
