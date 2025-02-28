@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 
 
 
-app.use(cors({ origin: "https://your-frontend.com" }));
+app.use(cors({ origin: "https://news-blog-react-one.vercel.app/" }));
 app.use(express.json());
 
 
