@@ -5,8 +5,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 
-// const API_KEY = "c47bdcbd3da841278359aedcadb8661a";
-const API_URL = ``;
+const API_KEY = "c47bdcbd3da841278359aedcadb8661a";
+// const API_URL = ``;
 
 const Home = () => {
   const location = useLocation();
@@ -42,7 +42,7 @@ const Home = () => {
   const fetchArticles = async (query = "general") => {
     setLoading(true);
     try {
-      const response = await axios.get(`https://news-blog-react.onrender.com`);
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`);
       setArticles(response.data.articles);
       setVisibleArticles(response.data.articles.slice(0, 9));
     } catch (error) {
