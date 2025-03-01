@@ -42,7 +42,7 @@ const Home = () => {
   const fetchArticles = async (query = "general") => {
     setLoading(true);
     try {
-      const response = await axios.get(`https://news-blog-react.onrender.com/news`);
+      const response = await axios.get(`https://news-blog-react.onrender.com`);
       setArticles(response.data.articles);
       setVisibleArticles(response.data.articles.slice(0, 9));
     } catch (error) {
@@ -67,7 +67,7 @@ const Home = () => {
   };
 
   return (
-    <div className="container mx-auto p-6 min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div className="w-full max-w-[1280px] mx-auto p-6 min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       {/* header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
