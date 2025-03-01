@@ -42,7 +42,7 @@ const Home = () => {
   const fetchArticles = async (query = "general") => {
     setLoading(true);
     try {
-      const response = await axios.get(`https://newsapi.org/v2/q=${query}&apiKey=${API_KEY}`);
+      const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${API_KEY}`);
       setArticles(response.data.articles);
       setVisibleArticles(response.data.articles.slice(0, 9));
     } catch (error) {
