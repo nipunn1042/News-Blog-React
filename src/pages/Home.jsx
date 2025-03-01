@@ -67,7 +67,7 @@ const Home = () => {
   };
 
   return (
-    <div className="w-full max-w-[1280px] mx-auto p-6 min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <div className="w-full max-w-auto mx-auto p-6 min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
       {/* header */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
